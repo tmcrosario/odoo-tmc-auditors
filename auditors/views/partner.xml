@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+<!-- FORM VIEW -->
+<record id="auditors.view_partner_form" model="ir.ui.view">
+    <field name="name">auditors.partner.form</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field eval="95" name="priority"/>
+    <field name="arch" type="xml">
+        <field name="sex" position="after">
+            <field name="civil_status"/>
+        </field>
+        <xpath expr="//group" position="inside">
+            <group name="auditor_years" attrs="{'invisible':[('auditor','=',False)]}">
+                <field name="year_ids" widget="many2many_tags" attrs="{'invisible':[('auditor','=',False)]}"/>
+            </group>
+        </xpath>
+        <page name="internal_notes" position="before">
+            <page name="resume" string="Resume" attrs="{'invisible':[('auditor','=',False)]}">
+                <field name="auditor" invisible="1"/>
+                <group string="Profession">
+                    <group>
+                        <field name="profession"/>
+                        <field name="university"/>
+                    </group>
+                    <group>
+                        <field name="registration_number"/>
+                        <field name="school"/>
+                    </group>
+                </group>
+                <group string="Resume">
+                    <field name="work"/>
+                    <field name="control"/>
+                    <field name="studies"/>
+                    <field name="interests"/>
+                </group>
+            </page>
+        </page>
+    </field>
+</record>
+
+<!-- WINDOW ACTION -->
+<record model="ir.actions.act_window" id="auditors.partner_list_action">
+    <field name="name">Auditors</field>
+    <field name="res_model">res.partner</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+    <field name="domain">[('auditor','=',True)]</field>
+    <field name="context">
+        {
+            'default_auditor': True,
+            'search_default_filter_actual_year': True
+        }
+    </field>
+    <field name="search_view_id" ref="auditors.partner_filter_view"/>
+    <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Click to create a new auditor.
+        </p><p>
+          No registries were found.
+        </p>
+    </field>
+</record>
+
+    <!-- SEARCH VIEW -->
+    <record model="ir.ui.view" id="auditors.partner_filter_view">
+        <field name="name">auditors.partner.filter</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="year_ids"/>
+                <group string="Group By">
+                    <filter name="group_by_parent_id"
+                            string="Profession"
+                            context="{'group_by': 'profession'}"/>
+                </group>
+               <filter string="Actual Year" name="filter_actual_year" domain="[('year_ids', 'ilike', (context_today().strftime('%%Y')))]"/>
+            </search>
+        </field>
+    </record>
+
+</data>
+</openerp>
