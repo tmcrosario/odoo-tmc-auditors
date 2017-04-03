@@ -1,0 +1,234 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * auditors
+# 
+# Translators:
+# Liso <lisandrogallo@tmcrosario.gov.ar>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-03 15:03+0000\n"
+"PO-Revision-Date: 2017-04-03 15:03+0000\n"
+"Last-Translator: Liso <lisandrogallo@tmcrosario.gov.ar>, 2017\n"
+"Language-Team: Spanish (Argentina) (https://www.transifex.com/tmcrosario/teams/54644/es_AR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: es_AR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: auditors
+#: model:ir.actions.act_window,help:auditors.partner_list_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"          Click to create a new auditor.\n"
+"        </p><p>\n"
+"          No registries were found.\n"
+"        </p>\n"
+"    "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"Click para crear un nuevo auditor.\n"
+"</p><p>\n"
+"No se encontraron registros.\n"
+"</p>"
+
+#. module: auditors
+#: selection:res.partner,profession:0
+msgid "Abogado"
+msgstr ""
+
+#. module: auditors
+#: view:res.partner:auditors.partner_filter_view
+msgid "Actual Year"
+msgstr "Año Actual"
+
+#. module: auditors
+#: field:res.partner,auditor:0
+msgid "Auditor"
+msgstr ""
+
+#. module: auditors
+#: field:auditors.year,auditor_ids:0
+msgid "Auditor ids"
+msgstr "Auditores"
+
+#. module: auditors
+#: model:ir.actions.act_window,name:auditors.partner_list_action
+#: model:ir.module.category,name:auditors.module_category_auditors
+#: model:ir.ui.menu,name:auditors.auditors_main_menu
+msgid "Auditors"
+msgstr "Auditores"
+
+#. module: auditors
+#: field:res.partner,civil_status:0
+msgid "Civil status"
+msgstr "Estado Civil"
+
+#. module: auditors
+#: model:ir.ui.menu,name:auditors.auditors_configuration
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: auditors
+#: selection:res.partner,profession:0
+msgid "Contador Público"
+msgstr ""
+
+#. module: auditors
+#: field:res.partner,control:0
+msgid "Control"
+msgstr "Antecedentes de Control"
+
+#. module: auditors
+#: field:auditors.institution,create_uid:0 field:auditors.year,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: auditors
+#: field:auditors.institution,create_date:0 field:auditors.year,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: auditors
+#: selection:res.partner,civil_status:0
+msgid "Divorced"
+msgstr "Divorciado"
+
+#. module: auditors
+#: model:ir.ui.menu,name:auditors.auditors_auditors_menu
+msgid "External Auditors"
+msgstr "Auditores Externos"
+
+#. module: auditors
+#: model:ir.ui.menu,name:auditors.auditors_auditors_year_menu
+msgid "External Auditors List"
+msgstr "Listado de Auditores"
+
+#. module: auditors
+#: view:res.partner:auditors.partner_filter_view
+msgid "Group By"
+msgstr ""
+
+#. module: auditors
+#: field:auditors.institution,id:0 field:auditors.year,id:0
+msgid "ID"
+msgstr ""
+
+#. module: auditors
+#: selection:res.partner,profession:0
+msgid "Ingeniero Civil"
+msgstr ""
+
+#. module: auditors
+#: field:auditors.institution,institution_type:0
+msgid "Institution type"
+msgstr "Tipo de Institución"
+
+#. module: auditors
+#: model:ir.actions.act_window,name:auditors.institution_list_action
+#: model:ir.ui.menu,name:auditors.auditors_configuration_institution
+msgid "Institutions"
+msgstr "Instituciones"
+
+#. module: auditors
+#: field:res.partner,interests:0
+msgid "Interests"
+msgstr "Otras Actividades de Interés"
+
+#. module: auditors
+#: field:auditors.institution,write_uid:0 field:auditors.year,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: auditors
+#: field:auditors.institution,write_date:0 field:auditors.year,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: auditors
+#: model:res.groups,name:auditors.group_manager
+msgid "Manager"
+msgstr "Responsable"
+
+#. module: auditors
+#: selection:res.partner,civil_status:0
+msgid "Married"
+msgstr "Casado"
+
+#. module: auditors
+#: field:auditors.institution,name:0 field:auditors.year,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: auditors
+#: model:ir.model,name:auditors.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: auditors
+#: view:res.partner:auditors.partner_filter_view
+#: view:res.partner:auditors.view_partner_form field:res.partner,profession:0
+msgid "Profession"
+msgstr "Profesión"
+
+#. module: auditors
+#: field:res.partner,registration_number:0
+msgid "Registration number"
+msgstr "Matrícula"
+
+#. module: auditors
+#: model:ir.module.category,description:auditors.module_category_auditors
+msgid "Registro de Auditores Externos"
+msgstr ""
+
+#. module: auditors
+#: view:res.partner:auditors.view_partner_form
+msgid "Resume"
+msgstr "Datos Profesionales"
+
+#. module: auditors
+#: selection:auditors.institution,institution_type:0
+msgid "School"
+msgstr "Colegio de Profesionales"
+
+#. module: auditors
+#: field:res.partner,school_id:0
+msgid "School id"
+msgstr "Colegio de Profesionales"
+
+#. module: auditors
+#: selection:res.partner,civil_status:0
+msgid "Single"
+msgstr "Soltero"
+
+#. module: auditors
+#: field:res.partner,studies:0
+msgid "Studies"
+msgstr "Estudios y Especializaciones"
+
+#. module: auditors
+#: selection:auditors.institution,institution_type:0
+msgid "University"
+msgstr "Universidad"
+
+#. module: auditors
+#: field:res.partner,university_id:0
+msgid "University id"
+msgstr "Universidad"
+
+#. module: auditors
+#: model:res.groups,name:auditors.group_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: auditors
+#: field:res.partner,work:0
+msgid "Work"
+msgstr "Actualidad Laboral"
+
+#. module: auditors
+#: field:res.partner,year_ids:0
+msgid "Year ids"
+msgstr "Registro Año"
