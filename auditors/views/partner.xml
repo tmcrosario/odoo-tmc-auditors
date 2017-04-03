@@ -2,6 +2,24 @@
 <openerp>
     <data>
 
+<!-- TREE VIEW -->
+<record id="auditors.view_partner_tree" model="ir.ui.view">
+    <field name="name">auditors.partner.tree</field>
+    <field name="model">res.partner</field>
+    <field eval="95" name="priority"/>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="profession"/>
+            <field name="university_id"/>
+            <field name="phone"/>
+            <field name="mobile"/>
+            <field name="email"/>
+            <field name="year_ids"/>
+        </tree>
+    </field>
+</record>
+
 <!-- FORM VIEW -->
 <record id="auditors.view_partner_form" model="ir.ui.view">
     <field name="name">auditors.partner.form</field>
@@ -55,6 +73,7 @@
         }
     </field>
     <field name="search_view_id" ref="auditors.partner_filter_view"/>
+    <field name="view_id" ref="auditors.view_partner_tree"/>
     <field name="help" type="html">
         <p class="oe_view_nocontent_create">
           Click to create a new auditor.
