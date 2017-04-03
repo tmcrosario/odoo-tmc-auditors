@@ -59,6 +59,24 @@
     </field>
 </record>
 
+<!-- SEARCH VIEW -->
+<record model="ir.ui.view" id="auditors.partner_filter_view">
+    <field name="name">auditors.partner.filter</field>
+    <field name="model">res.partner</field>
+    <field name="arch" type="xml">
+        <search>
+            <field name="name"/>
+            <field name="year_ids"/>
+            <group string="Group By">
+                <filter name="group_by_parent_id"
+                        string="Profession"
+                        context="{'group_by': 'profession'}"/>
+            </group>
+           <filter string="Actual Year" name="filter_actual_year" domain="[('year_ids', 'ilike', (context_today().strftime('%%Y')))]"/>
+        </search>
+    </field>
+</record>
+
 <!-- WINDOW ACTION -->
 <record model="ir.actions.act_window" id="auditors.partner_list_action">
     <field name="name">Auditors</field>
@@ -82,24 +100,6 @@
         </p>
     </field>
 </record>
-
-    <!-- SEARCH VIEW -->
-    <record model="ir.ui.view" id="auditors.partner_filter_view">
-        <field name="name">auditors.partner.filter</field>
-        <field name="model">res.partner</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="name"/>
-                <field name="year_ids"/>
-                <group string="Group By">
-                    <filter name="group_by_parent_id"
-                            string="Profession"
-                            context="{'group_by': 'profession'}"/>
-                </group>
-               <filter string="Actual Year" name="filter_actual_year" domain="[('year_ids', 'ilike', (context_today().strftime('%%Y')))]"/>
-            </search>
-        </field>
-    </record>
 
 </data>
 </openerp>
