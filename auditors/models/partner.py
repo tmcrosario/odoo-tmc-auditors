@@ -25,15 +25,14 @@ class Partner(models.Model):
 
     registration_number = fields.Char()
 
-    university = fields.Selection([
-        (u'UNR', u'Universidad Nacional de Rosario'),
-        (u'UCA', u'Universidad Católica Argentina')]
+    university_id = fields.Many2one(
+        comodel_name='auditors.institution',
+        domain=[('institution_type', '=', 'university')]
     )
 
-    school = fields.Selection([
-        (u'cpcesfe1', u'Consejo Profesional de Ciencias Económicas de Rosario'),
-        (u'cpcesfe2', u'Consejo Profesional de Ciencias Económicas de Santa Fe'),
-        (u'colabro', u'Colegio de Abogados de Rosario')]
+    school_id = fields.Many2one(
+        comodel_name='auditors.institution',
+        domain=[('institution_type', '=', 'school')]
     )
 
     year_ids = fields.Many2many('auditors.year')

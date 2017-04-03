@@ -23,11 +23,11 @@
                 <group string="Profession">
                     <group>
                         <field name="profession"/>
-                        <field name="university"/>
+                        <field name="university_id"/>
                     </group>
                     <group>
                         <field name="registration_number"/>
-                        <field name="school"/>
+                        <field name="school_id"/>
                     </group>
                 </group>
                 <group string="Resume">

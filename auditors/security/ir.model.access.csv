@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_auditors_year_manager,auditors.year.manager,model_auditors_year,group_manager,1,1,1,1
 access_auditors_year_user,auditors.year.user,model_auditors_year,group_user,1,0,0,0
+access_auditors_institution_manager,auditors.institution.manager,model_auditors_institution,group_manager,1,1,1,1
+access_auditors_institution_user,auditors.institution.user,model_auditors_institution,group_user,1,0,0,0

@@ -17,6 +17,7 @@
         'security/auditors_group.xml',
         'security/ir.model.access.csv',
         'views/partner.xml',
+        'views/institution.xml',
         'views/menu.xml',
     ],
     'demo': [],

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+<!-- TREE VIEW -->
+<record id="auditors.view_institution_tree" model="ir.ui.view">
+    <field name="name">auditors.institution.tree</field>
+    <field name="model">auditors.institution</field>
+    <field eval="95" name="priority"/>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="institution_type"/>
+        </tree>
+    </field>
+</record>
+
+<!-- WINDOW ACTION -->
+<record model="ir.actions.act_window" id="auditors.institution_list_action">
+    <field name="name">Institutions</field>
+    <field name="res_model">auditors.institution</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+</data>
+</openerp>
