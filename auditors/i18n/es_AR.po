@@ -3,15 +3,15 @@
 # * auditors
 # 
 # Translators:
-# Liso <lisandrogallo@tmcrosario.gov.ar>, 2017
+# Lisandro <lisandrogallo@tmcrosario.gov.ar>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0\n"
+"Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-03 15:03+0000\n"
-"PO-Revision-Date: 2017-04-03 15:03+0000\n"
-"Last-Translator: Liso <lisandrogallo@tmcrosario.gov.ar>, 2017\n"
-"Language-Team: Spanish (Argentina) (https://www.transifex.com/tmcrosario/teams/54644/es_AR/)\n"
+"POT-Creation-Date: 2017-11-01 15:08+0000\n"
+"PO-Revision-Date: 2017-11-01 15:08+0000\n"
+"Last-Translator: Lisandro <lisandrogallo@tmcrosario.gov.ar>, 2017\n"
+"Language-Team: Spanish (Argentina) (https://www.transifex.com/tmcrosario/teams/80104/es_AR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,38 +19,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: auditors
-#: model:ir.actions.act_window,help:auditors.partner_list_action
-msgid ""
-"<p class=\"oe_view_nocontent_create\">\n"
-"          Click to create a new auditor.\n"
-"        </p><p>\n"
-"          No registries were found.\n"
-"        </p>\n"
-"    "
-msgstr ""
-"<p class=\"oe_view_nocontent_create\">\n"
-"Click para crear un nuevo auditor.\n"
-"</p><p>\n"
-"No se encontraron registros.\n"
-"</p>"
-
-#. module: auditors
 #: selection:res.partner,profession:0
 msgid "Abogado"
 msgstr ""
 
 #. module: auditors
-#: view:res.partner:auditors.partner_filter_view
+#: model:ir.ui.view,arch_db:auditors.partner_filter_view
 msgid "Actual Year"
 msgstr "Año Actual"
 
 #. module: auditors
-#: field:res.partner,auditor:0
+#: model:ir.model.fields,field_description:auditors.field_res_partner_auditor
+#: model:ir.model.fields,field_description:auditors.field_res_users_auditor
 msgid "Auditor"
 msgstr ""
 
 #. module: auditors
-#: field:auditors.year,auditor_ids:0
+#: model:ir.model.fields,field_description:auditors.field_auditors_year_auditor_ids
 msgid "Auditor ids"
 msgstr "Auditores"
 
@@ -62,9 +47,15 @@ msgid "Auditors"
 msgstr "Auditores"
 
 #. module: auditors
-#: field:res.partner,civil_status:0
+#: model:ir.model.fields,field_description:auditors.field_res_partner_civil_status
+#: model:ir.model.fields,field_description:auditors.field_res_users_civil_status
 msgid "Civil status"
 msgstr "Estado Civil"
+
+#. module: auditors
+#: model:ir.actions.act_window,help:auditors.partner_list_action
+msgid "Click to create a new auditor."
+msgstr "Click aquí para crear un nuevo auditor."
 
 #. module: auditors
 #: model:ir.ui.menu,name:auditors.auditors_configuration
@@ -77,19 +68,28 @@ msgid "Contador Público"
 msgstr ""
 
 #. module: auditors
-#: field:res.partner,control:0
+#: model:ir.model.fields,field_description:auditors.field_res_partner_control
+#: model:ir.model.fields,field_description:auditors.field_res_users_control
 msgid "Control"
 msgstr "Antecedentes de Control"
 
 #. module: auditors
-#: field:auditors.institution,create_uid:0 field:auditors.year,create_uid:0
+#: model:ir.model.fields,field_description:auditors.field_auditors_institution_create_uid
+#: model:ir.model.fields,field_description:auditors.field_auditors_year_create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: auditors
-#: field:auditors.institution,create_date:0 field:auditors.year,create_date:0
+#: model:ir.model.fields,field_description:auditors.field_auditors_institution_create_date
+#: model:ir.model.fields,field_description:auditors.field_auditors_year_create_date
 msgid "Created on"
 msgstr ""
+
+#. module: auditors
+#: model:ir.model.fields,field_description:auditors.field_auditors_institution_display_name
+#: model:ir.model.fields,field_description:auditors.field_auditors_year_display_name
+msgid "Display Name"
+msgstr "Nombre"
 
 #. module: auditors
 #: selection:res.partner,civil_status:0
@@ -107,12 +107,13 @@ msgid "External Auditors List"
 msgstr "Listado de Auditores"
 
 #. module: auditors
-#: view:res.partner:auditors.partner_filter_view
+#: model:ir.ui.view,arch_db:auditors.partner_filter_view
 msgid "Group By"
 msgstr ""
 
 #. module: auditors
-#: field:auditors.institution,id:0 field:auditors.year,id:0
+#: model:ir.model.fields,field_description:auditors.field_auditors_institution_id
+#: model:ir.model.fields,field_description:auditors.field_auditors_year_id
 msgid "ID"
 msgstr ""
 
@@ -122,7 +123,7 @@ msgid "Ingeniero Civil"
 msgstr ""
 
 #. module: auditors
-#: field:auditors.institution,institution_type:0
+#: model:ir.model.fields,field_description:auditors.field_auditors_institution_institution_type
 msgid "Institution type"
 msgstr "Tipo de Institución"
 
@@ -133,17 +134,26 @@ msgid "Institutions"
 msgstr "Instituciones"
 
 #. module: auditors
-#: field:res.partner,interests:0
+#: model:ir.model.fields,field_description:auditors.field_res_partner_interests
+#: model:ir.model.fields,field_description:auditors.field_res_users_interests
 msgid "Interests"
-msgstr "Otras Actividades de Interés"
+msgstr " Otras Actividades de Interés"
 
 #. module: auditors
-#: field:auditors.institution,write_uid:0 field:auditors.year,write_uid:0
+#: model:ir.model.fields,field_description:auditors.field_auditors_institution___last_update
+#: model:ir.model.fields,field_description:auditors.field_auditors_year___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: auditors
+#: model:ir.model.fields,field_description:auditors.field_auditors_institution_write_uid
+#: model:ir.model.fields,field_description:auditors.field_auditors_year_write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: auditors
-#: field:auditors.institution,write_date:0 field:auditors.year,write_date:0
+#: model:ir.model.fields,field_description:auditors.field_auditors_institution_write_date
+#: model:ir.model.fields,field_description:auditors.field_auditors_year_write_date
 msgid "Last Updated on"
 msgstr ""
 
@@ -158,9 +168,15 @@ msgid "Married"
 msgstr "Casado"
 
 #. module: auditors
-#: field:auditors.institution,name:0 field:auditors.year,name:0
+#: model:ir.model.fields,field_description:auditors.field_auditors_institution_name
+#: model:ir.model.fields,field_description:auditors.field_auditors_year_name
 msgid "Name"
 msgstr "Nombre"
+
+#. module: auditors
+#: model:ir.actions.act_window,help:auditors.partner_list_action
+msgid "No registries were found."
+msgstr "No se encontraron registros."
 
 #. module: auditors
 #: model:ir.model,name:auditors.model_res_partner
@@ -168,13 +184,16 @@ msgid "Partner"
 msgstr ""
 
 #. module: auditors
-#: view:res.partner:auditors.partner_filter_view
-#: view:res.partner:auditors.view_partner_form field:res.partner,profession:0
+#: model:ir.model.fields,field_description:auditors.field_res_partner_profession
+#: model:ir.model.fields,field_description:auditors.field_res_users_profession
+#: model:ir.ui.view,arch_db:auditors.partner_filter_view
+#: model:ir.ui.view,arch_db:auditors.view_partner_form
 msgid "Profession"
 msgstr "Profesión"
 
 #. module: auditors
-#: field:res.partner,registration_number:0
+#: model:ir.model.fields,field_description:auditors.field_res_partner_registration_number
+#: model:ir.model.fields,field_description:auditors.field_res_users_registration_number
 msgid "Registration number"
 msgstr "Matrícula"
 
@@ -184,7 +203,7 @@ msgid "Registro de Auditores Externos"
 msgstr ""
 
 #. module: auditors
-#: view:res.partner:auditors.view_partner_form
+#: model:ir.ui.view,arch_db:auditors.view_partner_form
 msgid "Resume"
 msgstr "Datos Profesionales"
 
@@ -194,7 +213,8 @@ msgid "School"
 msgstr "Colegio de Profesionales"
 
 #. module: auditors
-#: field:res.partner,school_id:0
+#: model:ir.model.fields,field_description:auditors.field_res_partner_school_id
+#: model:ir.model.fields,field_description:auditors.field_res_users_school_id
 msgid "School id"
 msgstr "Colegio de Profesionales"
 
@@ -204,7 +224,8 @@ msgid "Single"
 msgstr "Soltero"
 
 #. module: auditors
-#: field:res.partner,studies:0
+#: model:ir.model.fields,field_description:auditors.field_res_partner_studies
+#: model:ir.model.fields,field_description:auditors.field_res_users_studies
 msgid "Studies"
 msgstr "Estudios y Especializaciones"
 
@@ -214,7 +235,8 @@ msgid "University"
 msgstr "Universidad"
 
 #. module: auditors
-#: field:res.partner,university_id:0
+#: model:ir.model.fields,field_description:auditors.field_res_partner_university_id
+#: model:ir.model.fields,field_description:auditors.field_res_users_university_id
 msgid "University id"
 msgstr "Universidad"
 
@@ -224,11 +246,23 @@ msgid "User"
 msgstr "Usuario"
 
 #. module: auditors
-#: field:res.partner,work:0
+#: model:ir.model.fields,field_description:auditors.field_res_partner_work
+#: model:ir.model.fields,field_description:auditors.field_res_users_work
 msgid "Work"
 msgstr "Actualidad Laboral"
 
 #. module: auditors
-#: field:res.partner,year_ids:0
+#: model:ir.model.fields,field_description:auditors.field_res_partner_year_ids
+#: model:ir.model.fields,field_description:auditors.field_res_users_year_ids
 msgid "Year ids"
 msgstr "Registro Año"
+
+#. module: auditors
+#: model:ir.model,name:auditors.model_auditors_institution
+msgid "auditors.institution"
+msgstr ""
+
+#. module: auditors
+#: model:ir.model,name:auditors.model_auditors_year
+msgid "auditors.year"
+msgstr ""

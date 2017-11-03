@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data>
+<odoo>
 
-<record model="ir.module.category" id="module_category_auditors">
-    <field name="name">Auditors</field>
-    <field name="description">Registro de Auditores Externos</field>
-    <field name="sequence">2</field>
-</record>
+    <record model="ir.module.category"
+            id="module_category_auditors">
+        <field name="name">Auditors</field>
+        <field name="description">Registro de Auditores Externos</field>
+        <field name="sequence">2</field>
+    </record>
 
-<record id="group_user" model="res.groups">
-    <field name="name">User</field>
-    <field name="users" eval="[(4, ref('base.user_root'))]"/>
-    <field name="category_id" ref="module_category_auditors"/>
-</record>
+    <record id="group_user"
+            model="res.groups">
+        <field name="name">User</field>
+        <field name="users"
+               eval="[(4, ref('base.user_root'))]" />
+        <field name="category_id"
+               ref="module_category_auditors" />
+    </record>
 
-<record id="group_manager" model="res.groups">
-    <field name="name">Manager</field>
-    <field name="users" eval="[(4, ref('base.user_root'))]"/>
-    <field name="category_id" ref="module_category_auditors"/>
-    <field name="implied_ids" eval="[(4,ref('group_user'))]"/>
-</record>
+    <record id="group_manager"
+            model="res.groups">
+        <field name="name">Manager</field>
+        <field name="users"
+               eval="[(4, ref('base.user_root'))]" />
+        <field name="category_id"
+               ref="module_category_auditors" />
+        <field name="implied_ids"
+               eval="[(4,ref('group_user'))]" />
+    </record>
 
-</data>
-</openerp>
+</odoo>
