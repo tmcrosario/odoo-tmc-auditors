@@ -35,7 +35,9 @@ class Partner(models.Model):
         domain=[('institution_type', '=', 'school')]
     )
 
-    year_ids = fields.Many2many('auditors.year')
+    year_ids = fields.Many2many(
+        comodel_name='auditors.year'
+    )
 
     work = fields.Text()
 
