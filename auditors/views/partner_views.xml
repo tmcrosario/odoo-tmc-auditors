@@ -2,9 +2,9 @@
 <odoo>
 
     <!-- TREE VIEW -->
-    <record id="auditors.view_partner_tree"
+    <record id="partner_view_tree"
             model="ir.ui.view">
-        <field name="name">auditors.partner.tree</field>
+        <field name="name">auditors.partner.view.tree</field>
         <field name="model">res.partner</field>
         <field eval="95"
                name="priority" />
@@ -23,9 +23,9 @@
     </record>
 
     <!-- FORM VIEW -->
-    <record id="auditors.view_partner_form"
+    <record id="partner_view_form"
             model="ir.ui.view">
-        <field name="name">auditors.partner.form</field>
+        <field name="name">auditors.partner.view.form</field>
         <field name="model">res.partner</field>
         <field name="inherit_id"
                ref="base.view_partner_form" />
@@ -33,10 +33,10 @@
                name="priority" />
         <field name="arch"
                type="xml">
-            <field name="gender"
+            <!-- <field name="gender"
                    position="after">
                 <field name="civil_status" />
-            </field>
+            </field> -->
             <xpath expr="//group"
                    position="inside">
                 <group name="auditor_years"
@@ -52,7 +52,7 @@
                       string="Resume"
                       attrs="{'invisible':[('auditor','=',False)]}">
                     <field name="auditor"
-                           invisible="1" />
+                           invisible="True" />
                     <group string="Profession">
                         <group>
                             <field name="profession" />
@@ -75,9 +75,9 @@
     </record>
 
     <!-- SEARCH VIEW -->
-    <record model="ir.ui.view"
-            id="auditors.partner_filter_view">
-        <field name="name">auditors.partner.filter</field>
+    <record id="partner_view_search"
+            model="ir.ui.view">
+        <field name="name">auditors.partner.view.search</field>
         <field name="model">res.partner</field>
         <field name="arch"
                type="xml">
@@ -97,20 +97,19 @@
     </record>
 
     <!-- WINDOW ACTION -->
-    <record model="ir.actions.act_window"
-            id="auditors.partner_list_action">
+    <record id="partner_action_form"
+            model="ir.actions.act_window">
         <field name="name">Auditors</field>
         <field name="res_model">res.partner</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
         <field name="domain">[('auditor','=',True)]</field>
         <field name="context">
             { 'default_auditor': True, 'search_default_filter_actual_year': True }
         </field>
         <field name="search_view_id"
-               ref="auditors.partner_filter_view" />
+               ref="partner_view_search" />
         <field name="view_id"
-               ref="auditors.view_partner_tree" />
+               ref="partner_view_search" />
         <field name="help"
                type="html">
             <p class="oe_view_nocontent_create">

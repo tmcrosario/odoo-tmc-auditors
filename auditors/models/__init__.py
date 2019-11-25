@@ -1,4 +1,3 @@
-
-import partner
-import year
-import institution
+from . import partner
+from . import year
+from . import institution

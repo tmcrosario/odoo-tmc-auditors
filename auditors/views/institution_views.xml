@@ -2,9 +2,9 @@
 <odoo>
 
     <!-- TREE VIEW -->
-    <record id="auditors.view_institution_tree"
+    <record id="institution_view_tree"
             model="ir.ui.view">
-        <field name="name">auditors.institution.tree</field>
+        <field name="name">auditors.institution.view.tree</field>
         <field name="model">auditors.institution</field>
         <field eval="95"
                name="priority" />
@@ -18,11 +18,10 @@
     </record>
 
     <!-- WINDOW ACTION -->
-    <record model="ir.actions.act_window"
-            id="auditors.institution_list_action">
+    <record id="institution_action_form"
+            model="ir.actions.act_window">
         <field name="name">Institutions</field>
         <field name="res_model">auditors.institution</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 

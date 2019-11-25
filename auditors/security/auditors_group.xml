@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record model="ir.module.category"
-            id="module_category_auditors">
+    <record id="module_category_auditors"
+            model="ir.module.category">
         <field name="name">Auditors</field>
         <field name="description">Registro de Auditores Externos</field>
         <field name="sequence">2</field>

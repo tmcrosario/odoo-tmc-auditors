@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="auditors_menu_root"
+              name="Auditors"
+              sequence="15"
+              action="partner_action_form"
+              groups="group_manager,group_user" />
+
+</odoo>
