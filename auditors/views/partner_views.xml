@@ -33,7 +33,11 @@
                name="priority" />
         <field name="arch"
                type="xml">
-            <!-- <field name="gender"
+            <field name="company_type"
+                   position="attributes">
+                <attribute name="attrs">{'invisible': True}</attribute>
+            </field>
+            <field name="gender"
                    position="after">
                 <field name="civil_status" />
             </field> -->

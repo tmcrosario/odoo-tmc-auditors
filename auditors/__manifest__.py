@@ -12,8 +12,8 @@
     'data': [
         'security/auditors_group.xml',
         'security/ir.model.access.csv',
-        'views/auditors_menus.xml',
         'views/partner_views.xml',
+        'views/auditors_menus.xml',
         'views/institution_views.xml',
         'views/institution_menus.xml',
     ],
