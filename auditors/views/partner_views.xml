@@ -40,7 +40,7 @@
             <field name="gender"
                    position="after">
                 <field name="civil_status" />
-            </field> -->
+            </field>
             <xpath expr="//group"
                    position="inside">
                 <group name="auditor_years"

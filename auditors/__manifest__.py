@@ -6,8 +6,8 @@
     'author': 'Tribunal Municipal de Cuentas - Municipalidad de Rosario',
     'license': 'AGPL-3',
     'depends': [
-        'tmc'
-        # 'partner_contact_gender'
+        'tmc',
+        'partner_contact_gender'
     ],
     'data': [
         'security/auditors_group.xml',
