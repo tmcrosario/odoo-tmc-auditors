@@ -2,9 +2,9 @@
 <odoo>
 
     <menuitem id="tmc_menu_config_auditors_institution"
-              name="External Auditors Institutions"
-              parent="tmc.tmc_menu_config"
-              sequence="20"
+              name="Institutions"
+              parent="tmc_menu_config_auditors"
+              sequence="5"
               action="institution_action_form" />
 
 </odoo>

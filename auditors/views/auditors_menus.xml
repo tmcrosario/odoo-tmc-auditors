@@ -7,4 +7,9 @@
               action="partner_action_form"
               groups="group_manager,group_user" />
 
+    <menuitem id="tmc_menu_config_auditors"
+              name="Auditors"
+              parent="tmc.tmc_menu_config"
+              sequence="15"/>
+
 </odoo>
