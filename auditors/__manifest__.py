@@ -10,7 +10,7 @@
         'partner_contact_gender'
     ],
     'data': [
-        'security/auditors_group.xml',
+        'security/groups.xml',
         'security/ir.model.access.csv',
         'views/partner_views.xml',
         'views/auditors_menus.xml',
