@@ -37,10 +37,6 @@
                    position="attributes">
                 <attribute name="attrs">{'invisible': True}</attribute>
             </field>
-            <field name="gender"
-                   position="after">
-                <field name="civil_status" />
-            </field>
             <xpath expr="//group"
                    position="inside">
                 <group name="auditor_years"

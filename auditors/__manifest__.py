@@ -7,7 +7,7 @@
     'license': 'AGPL-3',
     'depends': [
         'tmc',
-        'partner_contact_gender'
+        'partner_tmc'
     ],
     'data': [
         'security/groups.xml',
