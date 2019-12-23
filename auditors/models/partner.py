@@ -8,10 +8,6 @@ class Partner(models.Model):
 
     auditor = fields.Boolean()
 
-    civil_status = fields.Selection([('single', 'Single'),
-                                     ('married', 'Married'),
-                                     ('divorced', 'Divorced')])
-
     profession = fields.Selection([('contador', 'Contador Público'),
                                    ('abogado', 'Abogado'),
                                    ('ingeniero', 'Ingeniero Civil')])
