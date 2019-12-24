@@ -6,16 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-16 16:02+0000\n"
-"PO-Revision-Date: 2019-12-16 13:06-0300\n"
+"POT-Creation-Date: 2019-12-23 18:09+0000\n"
+"PO-Revision-Date: 2019-12-23 18:09+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"Language: es_AR\n"
-"X-Generator: Poedit 2.2.4\n"
 
 #. module: auditors
 #: model:ir.model.fields.selection,name:auditors.selection__res_partner__profession__abogado
@@ -41,12 +39,6 @@ msgstr ""
 #: model:ir.ui.menu,name:auditors.tmc_menu_config_auditors
 msgid "Auditors"
 msgstr "Auditores"
-
-#. module: auditors
-#: model:ir.model.fields,field_description:auditors.field_res_partner__civil_status
-#: model:ir.model.fields,field_description:auditors.field_res_users__civil_status
-msgid "Civil Status"
-msgstr "Estado Civil"
 
 #. module: auditors
 #: model_terms:ir.actions.act_window,help:auditors.partner_action_form
@@ -86,11 +78,6 @@ msgstr "Creado el"
 #: model:ir.model.fields,field_description:auditors.field_auditors_year__display_name
 msgid "Display Name"
 msgstr "Nombre"
-
-#. module: auditors
-#: model:ir.model.fields.selection,name:auditors.selection__res_partner__civil_status__divorced
-msgid "Divorced"
-msgstr "Divorciado"
 
 #. module: auditors
 #: model_terms:ir.ui.view,arch_db:auditors.partner_view_search
@@ -154,11 +141,6 @@ msgid "Manager"
 msgstr "Responsable"
 
 #. module: auditors
-#: model:ir.model.fields.selection,name:auditors.selection__res_partner__civil_status__married
-msgid "Married"
-msgstr "Casado"
-
-#. module: auditors
 #: model:ir.model.fields,field_description:auditors.field_auditors_institution__name
 #: model:ir.model.fields,field_description:auditors.field_auditors_year__name
 msgid "Name"
@@ -199,11 +181,6 @@ msgstr "Datos Profesionales"
 #: model:ir.model.fields.selection,name:auditors.selection__auditors_institution__institution_type__school
 msgid "School"
 msgstr "Colegio de Profesionales"
-
-#. module: auditors
-#: model:ir.model.fields.selection,name:auditors.selection__res_partner__civil_status__single
-msgid "Single"
-msgstr "Soltero"
 
 #. module: auditors
 #: model:ir.model.fields,field_description:auditors.field_res_partner__studies
