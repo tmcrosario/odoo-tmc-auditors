@@ -3,13 +3,13 @@
 
     <!-- TREE VIEW -->
     <record id="partner_view_tree"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">auditors.partner.view.tree</field>
         <field name="model">res.partner</field>
         <field eval="95"
-               name="priority" />
+            name="priority" />
         <field name="arch"
-               type="xml">
+            type="xml">
             <tree>
                 <field name="name" />
                 <field name="profession" />
@@ -24,35 +24,35 @@
 
     <!-- FORM VIEW -->
     <record id="partner_view_form"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">auditors.partner.view.form</field>
         <field name="model">res.partner</field>
         <field name="inherit_id"
-               ref="base.view_partner_form" />
+            ref="base.view_partner_form" />
         <field eval="95"
-               name="priority" />
+            name="priority" />
         <field name="arch"
-               type="xml">
+            type="xml">
             <field name="company_type"
-                   position="attributes">
+                position="attributes">
                 <attribute name="attrs">{'invisible': True}</attribute>
             </field>
             <xpath expr="//group"
-                   position="inside">
+                position="inside">
                 <group name="auditor_years"
-                       attrs="{'invisible':[('auditor','=',False)]}">
+                    attrs="{'invisible':[('auditor','=',False)]}">
                     <field name="year_ids"
-                           widget="many2many_tags"
-                           attrs="{'invisible':[('auditor','=',False)]}" />
+                        widget="many2many_tags"
+                        attrs="{'invisible':[('auditor','=',False)]}" />
                 </group>
             </xpath>
             <page name="internal_notes"
-                  position="before">
+                position="before">
                 <page name="resume"
-                      string="Resume"
-                      attrs="{'invisible':[('auditor','=',False)]}">
+                    string="Resume"
+                    attrs="{'invisible':[('auditor','=',False)]}">
                     <field name="auditor"
-                           invisible="True" />
+                        invisible="True" />
                     <group string="Profession">
                         <group>
                             <field name="profession" />
@@ -76,29 +76,29 @@
 
     <!-- SEARCH VIEW -->
     <record id="partner_view_search"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">auditors.partner.view.search</field>
         <field name="model">res.partner</field>
         <field name="arch"
-               type="xml">
+            type="xml">
             <search>
                 <field name="name" />
                 <field name="year_ids" />
-                <group string="Group By">
+                <group>
                     <filter name="group_by_parent_id"
-                            string="Profession"
-                            context="{'group_by': 'profession'}" />
+                        string="Profesión"
+                        context="{'group_by': 'profession'}" />
                 </group>
-                <filter string="Actual Year"
-                        name="filter_actual_year"
-                        domain="[('year_ids', 'ilike', (context_today().strftime('%%Y')))]" />
+                <filter string="Año Actual"
+                    name="filter_actual_year"
+                    domain="[('year_ids', 'ilike', (context_today().strftime('%%Y')))]" />
             </search>
         </field>
     </record>
 
     <!-- WINDOW ACTION -->
     <record id="partner_action_form"
-            model="ir.actions.act_window">
+        model="ir.actions.act_window">
         <field name="name">Auditors</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">tree,form</field>
@@ -107,11 +107,11 @@
             { 'default_auditor': True, 'search_default_filter_actual_year': True }
         </field>
         <field name="search_view_id"
-               ref="partner_view_search" />
+            ref="partner_view_search" />
         <field name="view_id"
-               ref="partner_view_search" />
+            ref="partner_view_search" />
         <field name="help"
-               type="html">
+            type="html">
             <p class="oe_view_nocontent_create">
                 Click to create a new auditor.
             </p>
