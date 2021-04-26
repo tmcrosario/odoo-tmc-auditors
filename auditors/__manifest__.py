@@ -7,7 +7,8 @@
     'license': 'AGPL-3',
     'depends': [
         'tmc',
-        'partner_tmc'
+        'partner_tmc',
+        'partner_fiscal'
     ],
     'data': [
         'security/groups.xml',

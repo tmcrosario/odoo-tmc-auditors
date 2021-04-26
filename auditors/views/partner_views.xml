@@ -17,7 +17,8 @@
                 <field name="phone" />
                 <field name="mobile" />
                 <field name="email" />
-                <field name="year_ids" />
+                <field name="year_ids"
+                    widget="many2many_tags" />
             </tree>
         </field>
     </record>
@@ -104,12 +105,12 @@
         <field name="view_mode">tree,form</field>
         <field name="domain">[('auditor','=',True)]</field>
         <field name="context">
-            { 'default_auditor': True, 'search_default_filter_actual_year': True }
+            { 'default_auditor': True}
         </field>
         <field name="search_view_id"
             ref="partner_view_search" />
         <field name="view_id"
-            ref="partner_view_search" />
+            ref="partner_view_tree" />
         <field name="help"
             type="html">
             <p class="oe_view_nocontent_create">
