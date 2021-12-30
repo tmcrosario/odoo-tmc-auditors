@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <menuitem id="tmc_menu_config_auditors_institution"
-              name="Institutions"
-              parent="tmc_menu_config_auditors"
-              sequence="5"
-              action="institution_action_form" />
+    <menuitem id="institution_menu"
+        name="Institutions"
+        parent="auditors_config_menu"
+        sequence="5"
+        action="institution_action_view_form" />
 
 </odoo>

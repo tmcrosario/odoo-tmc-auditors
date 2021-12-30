@@ -3,13 +3,13 @@
 
     <!-- TREE VIEW -->
     <record id="institution_view_tree"
-            model="ir.ui.view">
+        model="ir.ui.view">
         <field name="name">auditors.institution.view.tree</field>
         <field name="model">auditors.institution</field>
         <field eval="95"
-               name="priority" />
+            name="priority" />
         <field name="arch"
-               type="xml">
+            type="xml">
             <tree>
                 <field name="name" />
                 <field name="institution_type" />
@@ -18,8 +18,8 @@
     </record>
 
     <!-- WINDOW ACTION -->
-    <record id="institution_action_form"
-            model="ir.actions.act_window">
+    <record id="institution_action_view_form"
+        model="ir.actions.act_window">
         <field name="name">Institutions</field>
         <field name="res_model">auditors.institution</field>
         <field name="view_mode">tree,form</field>
