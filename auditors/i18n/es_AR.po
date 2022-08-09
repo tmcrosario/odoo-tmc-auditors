@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: Odoo Server 14.0-20220727\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-23 18:09+0000\n"
-"PO-Revision-Date: 2019-12-23 18:09+0000\n"
+"POT-Creation-Date: 2022-08-09 14:13+0000\n"
+"PO-Revision-Date: 2022-08-09 14:13+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,11 +21,6 @@ msgid "Abogado"
 msgstr ""
 
 #. module: auditors
-#: model_terms:ir.ui.view,arch_db:auditors.partner_view_search
-msgid "Actual Year"
-msgstr "Año Actual"
-
-#. module: auditors
 #: model:ir.model.fields,field_description:auditors.field_auditors_year__auditor_ids
 #: model:ir.model.fields,field_description:auditors.field_res_partner__auditor
 #: model:ir.model.fields,field_description:auditors.field_res_users__auditor
@@ -33,15 +28,20 @@ msgid "Auditor"
 msgstr ""
 
 #. module: auditors
-#: model:ir.actions.act_window,name:auditors.partner_action_form
+#: model:ir.actions.act_window,name:auditors.partner_action_view_form
 #: model:ir.module.category,name:auditors.module_category_auditors
-#: model:ir.ui.menu,name:auditors.auditors_menu_root
-#: model:ir.ui.menu,name:auditors.tmc_menu_config_auditors
+#: model:ir.ui.menu,name:auditors.auditors_config_menu
+#: model:ir.ui.menu,name:auditors.auditors_menu
 msgid "Auditors"
 msgstr "Auditores"
 
 #. module: auditors
-#: model_terms:ir.actions.act_window,help:auditors.partner_action_form
+#: model_terms:ir.ui.view,arch_db:auditors.partner_view_search
+msgid "Año Actual"
+msgstr ""
+
+#. module: auditors
+#: model_terms:ir.actions.act_window,help:auditors.partner_action_view_form
 msgid "Click to create a new auditor."
 msgstr "Click aquí para crear un nuevo auditor."
 
@@ -76,17 +76,14 @@ msgstr "Creado el"
 #. module: auditors
 #: model:ir.model.fields,field_description:auditors.field_auditors_institution__display_name
 #: model:ir.model.fields,field_description:auditors.field_auditors_year__display_name
+#: model:ir.model.fields,field_description:auditors.field_res_partner__display_name
 msgid "Display Name"
 msgstr "Nombre"
 
 #. module: auditors
-#: model_terms:ir.ui.view,arch_db:auditors.partner_view_search
-msgid "Group By"
-msgstr "Agrupar por"
-
-#. module: auditors
 #: model:ir.model.fields,field_description:auditors.field_auditors_institution__id
 #: model:ir.model.fields,field_description:auditors.field_auditors_year__id
+#: model:ir.model.fields,field_description:auditors.field_res_partner__id
 msgid "ID"
 msgstr ""
 
@@ -106,8 +103,8 @@ msgid "Institution Type"
 msgstr "Tipo de Institución"
 
 #. module: auditors
-#: model:ir.actions.act_window,name:auditors.institution_action_form
-#: model:ir.ui.menu,name:auditors.tmc_menu_config_auditors_institution
+#: model:ir.actions.act_window,name:auditors.institution_action_view_form
+#: model:ir.ui.menu,name:auditors.institution_menu
 msgid "Institutions"
 msgstr "Instituciones"
 
@@ -120,6 +117,7 @@ msgstr "Actividades de Interés"
 #. module: auditors
 #: model:ir.model.fields,field_description:auditors.field_auditors_institution____last_update
 #: model:ir.model.fields,field_description:auditors.field_auditors_year____last_update
+#: model:ir.model.fields,field_description:auditors.field_res_partner____last_update
 msgid "Last Modified on"
 msgstr "Última modificación en"
 
@@ -147,15 +145,19 @@ msgid "Name"
 msgstr "Nombre"
 
 #. module: auditors
-#: model_terms:ir.actions.act_window,help:auditors.partner_action_form
+#: model_terms:ir.actions.act_window,help:auditors.partner_action_view_form
 msgid "No registries were found."
 msgstr "No se encontraron registros."
+
+#. module: auditors
+#: model_terms:ir.ui.view,arch_db:auditors.partner_view_search
+msgid "Profesión"
+msgstr ""
 
 #. module: auditors
 #: model:ir.model.fields,field_description:auditors.field_res_partner__profession
 #: model:ir.model.fields,field_description:auditors.field_res_users__profession
 #: model_terms:ir.ui.view,arch_db:auditors.partner_view_form
-#: model_terms:ir.ui.view,arch_db:auditors.partner_view_search
 msgid "Profession"
 msgstr "Profesión"
 
