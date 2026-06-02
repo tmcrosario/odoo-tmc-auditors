@@ -31,12 +31,12 @@ Repo contains one module: `auditors`.
 
 ### Security
 
-- `auditors/security/auditors_groups.xml`: contains two `res.groups` records
-  (`group_user`, `group_manager`) each with
-  `<field name="category_id" ref="module_category_auditors"/>`. Per the spec security
-  section, `category_id` on `res.groups` may need to become a 19.0 `privilege_id`. This
-  is a non-trivial change and was NOT guessed. Left as-is and flagged under "Items left
-  for human review".
+- `auditors/security/auditors_groups.xml`: **migrated to the 19.0 `res.groups.privilege`
+  pattern** (correction applied after confirming the authoritative form in the migrated
+  `tmc`/`me` modules). Added a `res.groups.privilege` record
+  (`res_groups_privilege_auditors`, `category_id` → the `ir.module.category`); the two
+  `res.groups` (`group_user`, `group_manager`) now reference it via the new
+  `privilege_id` field.
 - `ir.model.access.csv`: unchanged (CSV columns are unchanged in 19.0).
 - No `groups_id` fields present on any affected model record (none to rename to
   `group_ids`).
@@ -90,11 +90,9 @@ domains, so they are listed here only for completeness:
 
 ## Items left for human review
 
-- `auditors/security/auditors_groups.xml`: both `res.groups` records set
-  `<field name="category_id" ref="module_category_auditors"/>`. In 19.0 group
-  categorization may require a `privilege_id` instead of `category_id`. This was
-  intentionally NOT changed to avoid guessing a privilege record. Review and adapt to
-  the correct 19.0 form if needed.
+- None outstanding. The `res.groups` security was migrated to the 19.0
+  `res.groups.privilege` pattern (see Security above) once the authoritative form was
+  confirmed in the migrated `tmc`/`me` modules.
 
 ## Lint findings
 
