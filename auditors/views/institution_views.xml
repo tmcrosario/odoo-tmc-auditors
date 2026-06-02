@@ -10,10 +10,10 @@
             name="priority" />
         <field name="arch"
             type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="institution_type" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -22,7 +22,7 @@
         model="ir.actions.act_window">
         <field name="name">Institutions</field>
         <field name="res_model">auditors.institution</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
 </odoo>

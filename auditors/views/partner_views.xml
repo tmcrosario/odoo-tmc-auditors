@@ -10,7 +10,7 @@
             name="priority" />
         <field name="arch"
             type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="profession" />
                 <field name="university_id" />
@@ -19,7 +19,7 @@
                 <field name="email" />
                 <field name="year_ids"
                     widget="many2many_tags" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -36,22 +36,22 @@
             type="xml">
             <field name="company_type"
                 position="attributes">
-                <attribute name="attrs">{'invisible': True}</attribute>
+                <attribute name="invisible">True</attribute>
             </field>
             <xpath expr="//group"
                 position="inside">
                 <group name="auditor_years"
-                    attrs="{'invisible':[('auditor','=',False)]}">
+                    invisible="not auditor">
                     <field name="year_ids"
                         widget="many2many_tags"
-                        attrs="{'invisible':[('auditor','=',False)]}" />
+                        invisible="not auditor" />
                 </group>
             </xpath>
             <page name="internal_notes"
                 position="before">
                 <page name="resume"
                     string="Resume"
-                    attrs="{'invisible':[('auditor','=',False)]}">
+                    invisible="not auditor">
                     <field name="auditor"
                         invisible="True" />
                     <group string="Profession">
@@ -102,7 +102,7 @@
         model="ir.actions.act_window">
         <field name="name">Auditors</field>
         <field name="res_model">res.partner</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="domain">[('auditor','=',True)]</field>
         <field name="context">
             { 'default_auditor': True}
