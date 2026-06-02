@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class Institution(models.Model):
-
     _name = "auditors.institution"
     _description = "Institution"
 

@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class Year(models.Model):
-
     _name = "auditors.year"
     _description = "Year"
 

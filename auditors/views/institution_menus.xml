@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-
-    <menuitem id="institution_menu"
+    <menuitem
+        id="institution_menu"
         name="Institutions"
         parent="auditors_config_menu"
         sequence="5"
-        action="institution_action_view_form" />
-
+        action="institution_action_view_form"
+    />
 </odoo>

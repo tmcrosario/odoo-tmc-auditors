@@ -1,15 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-
-    <menuitem id="auditors_menu"
+    <menuitem
+        id="auditors_menu"
         name="Auditors"
         sequence="15"
         action="partner_action_view_form"
-        groups="group_manager,group_user" />
+        groups="group_manager,group_user"
+    />
 
-    <menuitem id="auditors_config_menu"
+    <menuitem
+        id="auditors_config_menu"
         name="Auditors"
         parent="tmc.tmc_config_menu"
-        sequence="15" />
-
+        sequence="15"
+    />
 </odoo>
