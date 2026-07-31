@@ -78,7 +78,7 @@
                 <filter
                     string="Año Actual"
                     name="filter_actual_year"
-                    domain="[('year_ids', 'ilike', (context_today().strftime('%%Y')))]"
+                    domain="[('year_ids', 'ilike', (context_today().strftime('%Y')))]"
                 />
             </search>
         </field>
