@@ -14,6 +14,5 @@
         "views/institution_views.xml",
         "views/institution_menus.xml",
     ],
-    "demo": [],
     "installable": True,
-}  # yapf: disable
+}

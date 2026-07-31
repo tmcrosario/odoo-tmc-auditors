@@ -8,5 +8,5 @@ class Year(models.Model):
     name = fields.Char()
 
     auditor_ids = fields.Many2many(
-        comodel_name="res.partner", domain=[("active", "=", False)]
+        comodel_name="res.partner", domain=[("auditor", "=", True)]
     )

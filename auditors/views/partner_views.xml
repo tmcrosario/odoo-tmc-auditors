@@ -29,11 +29,7 @@
             </field>
             <xpath expr="//group" position="inside">
                 <group name="auditor_years" invisible="not auditor">
-                    <field
-                        name="year_ids"
-                        widget="many2many_tags"
-                        invisible="not auditor"
-                    />
+                    <field name="year_ids" widget="many2many_tags" />
                 </group>
             </xpath>
             <xpath expr="//notebook" position="inside">
@@ -70,7 +66,7 @@
                 <field name="year_ids" />
                 <group>
                     <filter
-                        name="group_by_parent_id"
+                        name="group_by_profession"
                         string="Profesión"
                         context="{'group_by': 'profession'}"
                     />
@@ -96,7 +92,7 @@
         <field name="search_view_id" ref="partner_view_search" />
         <field name="view_id" ref="partner_view_tree" />
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">
+            <p class="o_view_nocontent_smiling_face">
                 Click to create a new auditor.
             </p>
             <p>
