@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Fictional institutions/people (public-domain characters) so it is
+         unmistakably demo. Institutions and years first for the refs. -->
+    <record id="demo_inst_mancha" model="auditors.institution">
+        <field name="name">Universidad de la Mancha</field>
+        <field name="institution_type">university</field>
+    </record>
+
+    <record id="demo_inst_toboso" model="auditors.institution">
+        <field name="name">Universidad del Toboso</field>
+        <field name="institution_type">university</field>
+    </record>
+
+    <record id="demo_inst_cpcf" model="auditors.institution">
+        <field name="name">Consejo Profesional de Ciencias Ficticias</field>
+        <field name="institution_type">school</field>
+    </record>
+
+    <record id="demo_inst_escribanos" model="auditors.institution">
+        <field name="name">Colegio de Escribanos de Barataria</field>
+        <field name="institution_type">school</field>
+    </record>
+
+    <record id="demo_year_2024" model="auditors.year">
+        <field name="name">2024</field>
+    </record>
+
+    <record id="demo_year_2025" model="auditors.year">
+        <field name="name">2025</field>
+    </record>
+
+    <record id="demo_year_2026" model="auditors.year">
+        <field name="name">2026</field>
+    </record>
+
+    <!-- External auditor registry: all individuals, auditor=True, no cuit/dni
+         set so those constrains stay inert and the demo stays load-safe. -->
+    <record id="demo_auditor_belgrano" model="res.partner">
+        <field name="firstname">Eduardo</field>
+        <field name="lastname">Belgrano</field>
+        <field name="auditor" eval="True" />
+        <field name="profession">contador</field>
+        <field name="registration_number">90001</field>
+        <field name="university_id" ref="demo_inst_mancha" />
+        <field name="school_id" ref="demo_inst_cpcf" />
+        <field
+            name="year_ids"
+            eval="[(6, 0, [ref('demo_year_2025'), ref('demo_year_2026')])]"
+        />
+        <field name="email">eduardo.belgrano@example.com</field>
+        <field
+            name="work"
+        >Ejercicio independiente de la profesión; estudio contable propio.</field>
+        <field
+            name="control"
+        >Auditoría interna en entidad civil sin fines de lucro.</field>
+    </record>
+
+    <record id="demo_auditor_bello" model="res.partner">
+        <field name="firstname">Daniel</field>
+        <field name="lastname">Bello</field>
+        <field name="auditor" eval="True" />
+        <field name="profession">abogado</field>
+        <field name="university_id" ref="demo_inst_toboso" />
+        <field name="school_id" ref="demo_inst_escribanos" />
+        <field name="year_ids" eval="[(6, 0, [ref('demo_year_2025')])]" />
+        <field name="email">daniel.bello@example.com</field>
+        <field
+            name="work"
+        >Estudio jurídico propio; asesoramiento en derecho administrativo.</field>
+    </record>
+
+    <record id="demo_auditor_saenz" model="res.partner">
+        <field name="firstname">Amalia</field>
+        <field name="lastname">Sáenz</field>
+        <field name="auditor" eval="True" />
+        <field name="profession">contador</field>
+        <field name="registration_number">90002</field>
+        <field name="university_id" ref="demo_inst_mancha" />
+        <field name="school_id" ref="demo_inst_cpcf" />
+        <field
+            name="year_ids"
+            eval="[(6, 0, [ref('demo_year_2024'), ref('demo_year_2025'), ref('demo_year_2026')])]"
+        />
+        <field name="work">Jefa de Administración y Finanzas en empresa privada.</field>
+    </record>
+
+    <record id="demo_auditor_caceres" model="res.partner">
+        <field name="firstname">Fabio</field>
+        <field name="lastname">Cáceres</field>
+        <field name="auditor" eval="True" />
+        <field name="profession">ingeniero</field>
+        <field name="university_id" ref="demo_inst_toboso" />
+        <field name="year_ids" eval="[(6, 0, [ref('demo_year_2026')])]" />
+        <field
+            name="work"
+        >Dirección de obra y cómputos en obra pública municipal.</field>
+    </record>
+
+    <record id="demo_auditor_moreira" model="res.partner">
+        <field name="firstname">Juan</field>
+        <field name="lastname">Moreira</field>
+        <field name="auditor" eval="True" />
+        <field name="profession">contador</field>
+        <field name="registration_number">90003</field>
+        <field name="university_id" ref="demo_inst_mancha" />
+        <field name="school_id" ref="demo_inst_cpcf" />
+        <field name="year_ids" eval="[(6, 0, [ref('demo_year_2025')])]" />
+        <field
+            name="studies"
+        >Posgrado en Tributación (Universidad de la Mancha).</field>
+    </record>
+
+    <record id="demo_auditor_rivas" model="res.partner">
+        <field name="firstname">Martín</field>
+        <field name="lastname">Rivas</field>
+        <field name="auditor" eval="True" />
+        <field name="profession">abogado</field>
+        <field name="university_id" ref="demo_inst_toboso" />
+        <field name="school_id" ref="demo_inst_escribanos" />
+        <field
+            name="year_ids"
+            eval="[(6, 0, [ref('demo_year_2024'), ref('demo_year_2026')])]"
+        />
+        <field name="interests">Derecho municipal y control externo.</field>
+    </record>
+
+    <record id="demo_auditor_miranda" model="res.partner">
+        <field name="firstname">Lucía</field>
+        <field name="lastname">Miranda</field>
+        <field name="auditor" eval="True" />
+        <field name="profession">contador</field>
+        <field name="registration_number">90004</field>
+        <field name="university_id" ref="demo_inst_mancha" />
+        <field name="year_ids" eval="[(6, 0, [ref('demo_year_2026')])]" />
+        <field name="birthdate">1990-05-12</field>
+        <field name="civil_status">single</field>
+    </record>
+</odoo>
