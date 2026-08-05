@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0-20220727\n"
+"Project-Id-Version: Odoo Server 19.0-20260630\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-09 14:13+0000\n"
-"PO-Revision-Date: 2022-08-09 14:13+0000\n"
+"POT-Creation-Date: 2026-08-05 16:03+0000\n"
+"PO-Revision-Date: 2026-08-05 16:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,27 +18,28 @@ msgstr ""
 #. module: auditors
 #: model:ir.model.fields.selection,name:auditors.selection__res_partner__profession__abogado
 msgid "Abogado"
-msgstr ""
+msgstr "Abogado"
 
 #. module: auditors
 #: model:ir.model.fields,field_description:auditors.field_auditors_year__auditor_ids
 #: model:ir.model.fields,field_description:auditors.field_res_partner__auditor
 #: model:ir.model.fields,field_description:auditors.field_res_users__auditor
 msgid "Auditor"
-msgstr ""
+msgstr "Auditor"
 
 #. module: auditors
 #: model:ir.actions.act_window,name:auditors.partner_action_view_form
 #: model:ir.module.category,name:auditors.module_category_auditors
 #: model:ir.ui.menu,name:auditors.auditors_config_menu
 #: model:ir.ui.menu,name:auditors.auditors_menu
+#: model:res.groups.privilege,name:auditors.res_groups_privilege_auditors
 msgid "Auditors"
 msgstr "Auditores"
 
 #. module: auditors
 #: model_terms:ir.ui.view,arch_db:auditors.partner_view_search
 msgid "Año Actual"
-msgstr ""
+msgstr "Año Actual"
 
 #. module: auditors
 #: model_terms:ir.actions.act_window,help:auditors.partner_action_view_form
@@ -53,7 +54,7 @@ msgstr "Contacto"
 #. module: auditors
 #: model:ir.model.fields.selection,name:auditors.selection__res_partner__profession__contador
 msgid "Contador Público"
-msgstr ""
+msgstr "Contador Público"
 
 #. module: auditors
 #: model:ir.model.fields,field_description:auditors.field_res_partner__control
@@ -85,12 +86,12 @@ msgstr "Nombre"
 #: model:ir.model.fields,field_description:auditors.field_auditors_year__id
 #: model:ir.model.fields,field_description:auditors.field_res_partner__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: auditors
 #: model:ir.model.fields.selection,name:auditors.selection__res_partner__profession__ingeniero
 msgid "Ingeniero Civil"
-msgstr ""
+msgstr "Ingeniero Civil"
 
 #. module: auditors
 #: model:ir.model,name:auditors.model_auditors_institution
@@ -113,13 +114,6 @@ msgstr "Instituciones"
 #: model:ir.model.fields,field_description:auditors.field_res_users__interests
 msgid "Interests"
 msgstr "Actividades de Interés"
-
-#. module: auditors
-#: model:ir.model.fields,field_description:auditors.field_auditors_institution____last_update
-#: model:ir.model.fields,field_description:auditors.field_auditors_year____last_update
-#: model:ir.model.fields,field_description:auditors.field_res_partner____last_update
-msgid "Last Modified on"
-msgstr "Última modificación en"
 
 #. module: auditors
 #: model:ir.model.fields,field_description:auditors.field_auditors_institution__write_uid
@@ -152,7 +146,7 @@ msgstr "No se encontraron registros."
 #. module: auditors
 #: model_terms:ir.ui.view,arch_db:auditors.partner_view_search
 msgid "Profesión"
-msgstr ""
+msgstr "Profesión"
 
 #. module: auditors
 #: model:ir.model.fields,field_description:auditors.field_res_partner__profession
@@ -170,7 +164,7 @@ msgstr "Nº de Registro"
 #. module: auditors
 #: model:ir.module.category,description:auditors.module_category_auditors
 msgid "Registro de Auditores Externos"
-msgstr ""
+msgstr "Registro de Auditores Externos"
 
 #. module: auditors
 #: model_terms:ir.ui.view,arch_db:auditors.partner_view_form
