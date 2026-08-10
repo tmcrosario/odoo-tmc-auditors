@@ -1,4 +1,4 @@
-# Claude Instructions for `odoo-tmc-auditors`
+# Agent conventions for `odoo-tmc-auditors`
 
 TMC Odoo 19.0 addon repository.
 
